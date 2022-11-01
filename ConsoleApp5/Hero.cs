@@ -14,6 +14,8 @@ namespace ConsoleApp5
         public List<Weapon> Inventory { get; set; }
         public List<Armor> Armor { get; set; }
 
+        
+  
         public Hero(string name, double hp)
         {
             Name = name;
@@ -38,10 +40,25 @@ namespace ConsoleApp5
             else
             {
                 Hp -= damage;
-                Console.WriteLine($"Heroes HP is {Hp}");
+                Console.WriteLine($"{Name} HP is {Hp}");
             }
             return Hp;
         }
 
+        public void Heal()
+        {
+           
+            Random rand = new Random();
+            int giveheal = rand.Next(30, 100);
+            if (Hp < 10)
+            {
+                Hp += giveheal;
+                Console.WriteLine($"Вася восполнил {giveheal} хп, нынешнее здоровье {Name} : {Hp}");
+            }
+            else
+            {
+                Console.WriteLine($"Здоровье {Name} : {Hp}");
+            }
+        }
     }
 }

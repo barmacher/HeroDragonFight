@@ -6,3 +6,4 @@ Smaug.TakeDamage(firstAttack);
 Console.WriteLine("Smaug breathes fire...");
 double secondAttack = Smaug.Incinirate(Vasya);
 Vasya.TakeDamage(secondAttack);
+Vasya.Heal();

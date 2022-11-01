@@ -12,24 +12,8 @@ namespace ConsoleApp5
 
         public double Hp { get; set; }
         public double Armor { get; set; }
-        public string Name
-        {
-            get
-            {
-                if (_name == "Smaug")
-                {
-                    return $"Hello {_name}";
-                }
-                else
-                {
-                    return _name;
-                }
-            }
-            set
-            {
-
-            }
-        }
+        public string Name { get; set; }
+       
         public double Damage { get; set; }
         public double Mana { get; set; }
         
@@ -44,7 +28,7 @@ namespace ConsoleApp5
         {
             Console.WriteLine($"{Name} incinirate {hero.Name}");
             Random rand = new Random();
-            double damage = rand.Next(100, 300);
+            double damage = rand.Next(90, 100);
             return damage;
         }
 
