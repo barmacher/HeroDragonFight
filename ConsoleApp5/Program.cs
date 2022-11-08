@@ -7,26 +7,27 @@ try
     Console.WriteLine("Введите хп нового героя");
     double heroHp = double.Parse(Console.ReadLine());
     Hero Vasya = new Hero(heroName, heroHp);
-    if (heroName != "Vasya" && heroHp <100)
+    if (heroName == "Vasya" && heroHp<=100)
     {
-        throw new Exception("Неверное имя");
-
+        Console.WriteLine($"Имя созданного героя - {heroName} и {heroHp}");
     }
     else
     {
-        Console.WriteLine($"Имя созданного героя - {heroName} и {heroHp}");
+        throw new Exception("Wrong name and hp");
     }
     Console.WriteLine("Введите имя нового дракона");
     string dragonName = Console.ReadLine();
     Console.WriteLine("Введите хп нового дракона");
     double dragonHp = double.Parse(Console.ReadLine());
-    if(dragonName != "Smaug" && dragonHp < 300)
+    if(dragonName == "Smaug" && dragonHp <= 300)
     {
-        throw new Exception("Имя дракона должно быть Смауг, и хп должно быть не меньше 300");
+        Console.WriteLine($"Имя созданного героя {dragonName} здоровье {dragonHp}");
+
     }
     else
     {
-        Console.WriteLine($"Имя созданного героя {dragonName} здоровье {dragonHp}");
+        throw new Exception("Имя дракона должно быть Смауг, и хп должно быть не меньше 300");
+
     }
     //Hero Vasya = new Hero("Vasya", 100);
     //Dragon Smaug = new Dragon("Smaug", 500);
